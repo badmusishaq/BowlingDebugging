@@ -164,6 +164,8 @@ public class GameManager : MonoBehaviour
 
     private void SetupFrame()
     {
+        DisposeLastFrame();
+
         currentFrame++;
         var totalScore = frames.Count > 0 ? LastFrame.TotalFrameScore : 0;
         frames.Add(new Frame(currentFrame, totalScore));
